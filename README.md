@@ -1,6 +1,9 @@
 # 230project
 A Haskell programmed maze puzzle game.<br>
 A player starts from the top left corner of the maze, moves in the complex and branched passages to find the exit of the maze.<br>
+## Libraries
+The project is implemented using this library. https://github.com/jtdaugherty/brick/
+
 ## Modes
 The game includes the following modes:<br>
 (1) Randomly changing walls: after the player has moved 10 steps in the maze, a random wall in the maze will change and create new paths for the player to find.<br>
