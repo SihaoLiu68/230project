@@ -8,7 +8,7 @@ module Attr (
 ) where
 
 import Brick (AttrMap, AttrName, attrMap, fg)
-import Graphics.Vty (defAttr, green, yellow, red, white)
+import Graphics.Vty (defAttr, green, yellow, red, white, blue)
 
 grass, ground, obstacle, cloud, shortob :: AttrName
 grass = "grass"
@@ -19,9 +19,9 @@ cloud = "cloud"
 
 attr :: AttrMap
 attr = attrMap defAttr [
-        (grass, fg green)
-      , (ground, fg yellow)
-      , (obstacle, fg red)
+        (grass, fg yellow)
+      , (ground, fg red)
+      , (obstacle, fg green)
       , (cloud, fg white)
-      , (shortob, fg red)
+      , (shortob, fg white)
     ]
