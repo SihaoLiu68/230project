@@ -16,19 +16,19 @@ makeRow :: Int -> AttrName -> Char -> Widget Name
 makeRow screenWidth attr char = withAttr attr . str $ const char <$> [1 .. screenWidth]
 
 drawObstacle :: Obstacles -> Int -> Char
-drawObstacle obs i = if i `elem` obs then 'Y' else ' '
+drawObstacle obs i = if i `elem` obs then 'T' else ' '
 
 drawObstacles :: Obstacles -> Int -> Int -> Widget Name
 drawObstacles obs pos screenWidth = withAttr obstacle . str $ drawObstacle obs <$> [pos .. screenWidth + pos]
 
 drawCloud :: Clouds -> Int -> Char
-drawCloud obs i = if i `elem` obs then '\2601' else ' '
+drawCloud obs i = if i `elem` obs then '@' else ' '
 
 drawClouds :: Clouds -> Int -> Int -> Widget Name 
 drawClouds obs pos screenWidth = withAttr cloud . str $ drawCloud obs <$> [pos .. screenWidth + pos]
 
 drawShortobs :: Shortobs -> Int -> Char 
-drawShortobs obs i = if i `elem` obs then 'T' else ' '
+drawShortobs obs i = if i `elem` obs then '~' else ' '
 
 drawShortobss :: Shortobs -> Int -> Int -> Widget Name 
 drawShortobss obs pos screenWidth = withAttr shortob . str $ drawShortobs obs <$> [pos .. screenWidth + pos]
@@ -83,7 +83,7 @@ draw ui = [
           score = str $ "Score: " ++ show i'
           upper = [drawClouds clds i' w]
           
-          rows = [drawObstacles obs i' w, makeRow w grass '=', makeRow w ground 'X']
+          rows = [drawObstacles obs i' w, makeRow w grass 'w', makeRow w ground 'X']
           shorter = [drawShortobss sho i' w]
           
 
