@@ -31,3 +31,7 @@ Main functions include:<br>
 
 ### Deadline
 We believe we can meet our goal at the deadline. We are meeting every three days to try to finish this project ahead of time. And we will consult TAs when we have any question.
+
+## Installation
+To run the game, first run the command `stack run` in terminal in the 230project directory.<br>
+To start the game, run the command `stack exec runner 30` in terminal where `30` is the speed that can be any number from 10 to infinite.<br>
