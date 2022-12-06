@@ -53,8 +53,8 @@ create s sp = UI {
       , _dimensions = s
       , _player = (Level, 0)
       , _obstacles = [fst s]
-      , _clouds = [fst s]
-      , _shortobs = [fst s]
+      , _clouds = [snd s]
+      , _shortobs = [snd s]
       , _state = Playing
       , _speed = sp
     }
@@ -64,8 +64,8 @@ reset ui = ui
     & state .~ Playing
     & player .~ (Level, 0)
     & obstacles .~ [fst s]
-    & clouds .~ [fst s]
-    & shortobs .~ [fst s]
+    & clouds .~ [snd s]
+    & shortobs .~ [snd s]
     & position .~ 0
     where s = ui ^. dimensions
 
