@@ -5,11 +5,6 @@ The game's idea is based on the idea of the popular dino game on Chrome web brow
 ## Libraries
 The project is implemented using this library. https://github.com/jtdaugherty/brick/
 
-## Game
-The game runs as follows:<br>
-(1) type in 'runner 10' in the command line, where the number '10' represents your moving speed
-(2) use 'space' to jump, use 'q' to quit, use 'ENTER' to restart the game. <br>
-
 
 ## Milestone 3
 ### Architectures
